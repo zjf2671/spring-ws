@@ -1,6 +1,7 @@
 **spring-ws-server**
     
     Spring Web Services server
+    测试是否成功url http://localhost:8080/ws/countries.wsdl
     
 **spring-ws-client**
 
