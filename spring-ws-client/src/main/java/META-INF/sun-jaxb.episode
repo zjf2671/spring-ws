@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+在重新编译源模式时, 对此文件的所有修改都将丢失。
+生成时间: 2019.10.25 时间 06:02:05 PM CST 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.zy.com/ws">
+    <schemaBindings map="false">
+      <package name="com.zy.ws"/>
+    </schemaBindings>
+    <bindings scd="tns:getCountryRequest">
+      <class ref="com.zy.ws.GetCountryRequest"/>
+    </bindings>
+    <bindings scd="tns:getCountryResponse">
+      <class ref="com.zy.ws.GetCountryResponse"/>
+    </bindings>
+    <bindings scd="~tns:country">
+      <class ref="com.zy.ws.Country"/>
+    </bindings>
+    <bindings scd="~tns:currency">
+      <typesafeEnumClass ref="com.zy.ws.Currency"/>
+    </bindings>
+  </bindings>
+</bindings>
+

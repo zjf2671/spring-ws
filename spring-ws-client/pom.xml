@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.zy</groupId>
+		<artifactId>spring-ws</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>spring-ws-client</artifactId>
+	<name>spring-ws-client</name>
+	<description>Demo project for Spring Boot</description>
+
+	<dependencies>
+		<!--ws client-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>0.12.3</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<schemaLanguage>WSDL</schemaLanguage>
+					<generatePackage>com.zy.ws</generatePackage>
+					<generateDirectory>${basedir}/src/main/java</generateDirectory>
+					<schemas>
+						<schema>
+							<fileset>
+								<!-- Defaults to schemaDirectory. -->
+								<directory>${basedir}/src/main/resources/schemas</directory>
+								<!-- Defaults to schemaIncludes. -->
+								<includes>
+									<include>*.wsdl</include>
+								</includes>
+								<!-- Defaults to schemaIncludes -->
+								<!--<excludes>-->
+								<!--<exclude>*.xs</exclude>-->
+								<!--</excludes>-->
+							</fileset>
+							<!--<url>http://localhost:8080/ws/countries.wsdl</url>-->
+						</schema>
+					</schemas>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
