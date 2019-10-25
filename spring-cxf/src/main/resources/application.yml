@@ -1,0 +1,8 @@
+server:
+  servlet:
+    context-path: /web
+  port: 8082
+cxf:
+  path: /soap
+  servlet:
+    load-on-startup: 1
