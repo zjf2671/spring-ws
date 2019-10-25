@@ -1,6 +1,6 @@
 **spring-ws-server**
     
-    1）Spring Web Services server
+    Spring Web Services server
     
 **spring-ws-client**
 
